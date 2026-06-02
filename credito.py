@@ -11,7 +11,16 @@ def avaliar_credito(caminho):
         rendimento = ws[f"B{i}"].value
         divida = ws[f"C{i}"].value
 
-        if rendimento and rendimento > 0:
+        # !!!!
+        try:
+            rendimento = float(rendimento)
+            divida = float(divida)
+        except (TypeError, ValueError):
+            ws[f"D{i}"] = "Erro"
+            ws[f"E{i}"] = "Dados inválidos"
+            continue
+
+        if rendimento > 0:
             racio = divida / rendimento
         else:
             racio = 1
