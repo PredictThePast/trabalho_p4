@@ -7,5 +7,5 @@ Menor que 0.3:	Dívida baixa face ao rendimento:	Aprovado\
 Entre 0.3 e 0.6:	Situação intermédia:	Análise\
 Maior que 0.6:	Dívida muito alta:	Recusado
 
-original.xlsx: excel sem a modificacao dos scripts.
+_resultado.xlsx: excel resultante dos codigos melhorados
 
