@@ -85,7 +85,7 @@ def gerar_estatisticas(ws):
         for i in range(2, ws.max_row + 1)
     ]
 
-    print("\n📊 Estatísticas:")
+    print("\n Estatísticas:")
     print(f"  Total de clientes  : {len(racios)}")
     print(f"  Rácio médio        : {round(sum(racios) / len(racios), 2)}")
     print(f"  Rácio máximo       : {max(racios)}")
@@ -101,15 +101,15 @@ def gerar_estatisticas(ws):
     ]
     ordenados = sorted(clientes, key=lambda x: x[1])
 
-    print("\n🏆 Ranking (menos endividado → mais endividado):")
+    print("\nRanking (menos endividado → mais endividado):")
     for pos, (nome, racio) in enumerate(ordenados, start=1):
         print(f"  {pos}º {nome} — rácio: {racio}")
 
     # filter() — listar apenas os recusados
     recusados = list(filter(lambda x: x[1] >= LIMITE_ANALISE, clientes))
-    print(f"\n❌ Clientes recusados: {len(recusados)}")
+    print(f"\n Clientes recusados: {len(recusados)}")
     aprovados = list(filter(lambda x: x[1] < LIMITE_APROVADO, clientes))
-    print(f"✅ Clientes aprovados: {len(aprovados)}")
+    print(f" Clientes aprovados: {len(aprovados)}")
 
 
 # ─── 7. Função recursiva ──────────────────
@@ -127,12 +127,12 @@ def main(caminho="credito.xlsx"):
 
     processar_credito(ws)
     wb.save("credito_resultado.xlsx")
-    print("✅ Ficheiro guardado como credito_resultado.xlsx")
+    print("Ficheiro guardado como credito_resultado.xlsx")
 
     gerar_estatisticas(ws)
 
     total_dividas = somar_dividas(ws, 2)
-    print(f"\n💰 Total de dívidas em carteira: {total_dividas}€")
+    print(f"\n Total de dívidas em carteira: {total_dividas}€")
 
 
 main()

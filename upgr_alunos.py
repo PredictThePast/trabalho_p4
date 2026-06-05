@@ -68,7 +68,7 @@ def gerar_estatisticas(ws):
         for i in range(2, ws.max_row + 1)
     ]
 
-    print("\n📊 Estatísticas:")
+    print("\n Estatísticas:")
     print(f"  Média de presenças : {round(sum(percentagens) / len(percentagens), 1)}%")
     print(f"  Máximo             : {max(percentagens)}%")
     print(f"  Mínimo             : {min(percentagens)}%")
@@ -81,7 +81,7 @@ def gerar_estatisticas(ws):
     ]
     alunos_ordenados = sorted(alunos, key=lambda x: x[1], reverse=True)
 
-    print("\n🏆 Ranking de presenças:")
+    print("\n Ranking de presenças:")
     for pos, (nome, perc) in enumerate(alunos_ordenados, start=1):
         print(f"  {pos}º {nome} — {perc}%")
 
@@ -101,7 +101,7 @@ def main(caminho="alunos.xlsx"):
 
     processar_presencas(ws)
     wb.save("alunos_resultado.xlsx") 
-    print("✅ Ficheiro atualizado com sucesso.")
+    print("Ficheiro atualizado com sucesso.")
 
     gerar_estatisticas(ws)
 
@@ -110,8 +110,8 @@ def main(caminho="alunos.xlsx"):
         for i in range(2, ws.max_row + 1)
     ]
     excluidos = list(filter(lambda p: p < LIMITE_PRESENCA, percentagens))
-    print(f"\n⚠️  Alunos excluídos: {len(excluidos)}")
-    print(f"✅  Alunos admitidos (recursivo): {contar_admitidos(percentagens)}")
+    print(f"\n Alunos excluídos: {len(excluidos)}")
+    print(f" Alunos admitidos (recursivo): {contar_admitidos(percentagens)}")
 
 
 main()
