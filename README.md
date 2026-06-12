@@ -70,7 +70,7 @@ Principais responsabilidades:
 
 Lógica:
 
-    raˊcio=dividarendimentoraˊcio=rendimentodivida​
+    racio=dividarendimento racio=rendimentodivida​
 
     Classificação:
 
@@ -172,7 +172,7 @@ Se um cliente tiver:
 
 Então:
 
-    raˊcio=1500/3000=0.5raˊcio=1500/3000=0.5
+    racio=1500/3000=0.5raˊcio=1500/3000=0.5
 
 Resultado:
 
