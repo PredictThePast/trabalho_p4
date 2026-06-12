@@ -37,6 +37,7 @@ upgr_credito.py:/
 _resultado.xlsx: excel resultante dos codigos melhorados
 _Explicação do Sistema de Análise de Crédito
 
+poo_credito.py:
 Este código implementa um sistema completo de análise de crédito baseada em ficheiros Excel, aplicando conceitos de programação orientada a objetos (POO) como encapsulamento, herança, polimorfismo e composição.
 1. Configuração Global
 
